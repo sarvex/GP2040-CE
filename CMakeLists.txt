@@ -52,9 +52,9 @@ src/addons/i2canalog1219.cpp
 
 set_target_properties(${PROJECT_NAME} PROPERTIES OUTPUT_NAME ${PROJECT_NAME}_${CMAKE_PROJECT_VERSION}_${GP2040_BOARDCONFIG})
 
-target_compile_definitions(${PROJECT_NAME} PRIVATE
-PICO_XOSC_STARTUP_DELAY_MULTIPLIER=64
-)
+# target_compile_definitions(${PROJECT_NAME} PRIVATE
+# PICO_XOSC_STARTUP_DELAY_MULTIPLIER=64
+# )
 
 pico_set_program_name(GP2040-CE "GP2040-CE")
 pico_set_program_version(GP2040-CE "0.6.0")
