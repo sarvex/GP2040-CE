@@ -5,31 +5,34 @@
 
 #ifndef FLATBOX_REV4_CONFIG_H_
 #define FLATBOX_REV4_CONFIG_H_
+#endif
+
+#ifndef PICO_XOSC_STARTUP_DELAY_MULTIPLIER
+#define PICO_XOSC_STARTUP_DELAY_MULTIPLIER 64
+#endif
 
 #include <GamepadEnums.h>
 
-
 // Mapping between Flatbox Rev4 switch number (as silkscreened) and GPIO pin
 
-#define FLATBOX_SW1_PIN    6
-#define FLATBOX_SW2_PIN    5
-#define FLATBOX_SW3_PIN    4
-#define FLATBOX_SW4_PIN    3
-#define FLATBOX_SW5_PIN    2
-#define FLATBOX_SW6_PIN    1
-#define FLATBOX_SW7_PIN    9  // LEFT
-#define FLATBOX_SW8_PIN    10 // DOWN
-#define FLATBOX_SW9_PIN    11 // RIGHT
-#define FLATBOX_SW10_PIN   18 // P1 / SQUARE
-#define FLATBOX_SW11_PIN   25 // P2 / TRIANGLE
-#define FLATBOX_SW12_PIN   27 // P3
-#define FLATBOX_SW13_PIN   29 // P4
-#define FLATBOX_SW14_PIN   19 // K1 / CROSS
-#define FLATBOX_SW15_PIN   24 // K2 / CIRCLE
-#define FLATBOX_SW16_PIN   26 // K3
-#define FLATBOX_SW17_PIN   28 // K4
-#define FLATBOX_SW18_PIN   16 // UP / THUMB
-
+#define FLATBOX_SW1_PIN 6
+#define FLATBOX_SW2_PIN 5
+#define FLATBOX_SW3_PIN 4
+#define FLATBOX_SW4_PIN 3
+#define FLATBOX_SW5_PIN 2
+#define FLATBOX_SW6_PIN 1
+#define FLATBOX_SW7_PIN 9	// LEFT
+#define FLATBOX_SW8_PIN 10	// DOWN
+#define FLATBOX_SW9_PIN 11	// RIGHT
+#define FLATBOX_SW10_PIN 18 // P1 / SQUARE
+#define FLATBOX_SW11_PIN 25 // P2 / TRIANGLE
+#define FLATBOX_SW12_PIN 27 // P3
+#define FLATBOX_SW13_PIN 29 // P4
+#define FLATBOX_SW14_PIN 19 // K1 / CROSS
+#define FLATBOX_SW15_PIN 24 // K2 / CIRCLE
+#define FLATBOX_SW16_PIN 26 // K3
+#define FLATBOX_SW17_PIN 28 // K4
+#define FLATBOX_SW18_PIN 16 // UP / THUMB
 
 // This is the main pin definition section.
 // This will let you specify which GPIO pin each button is assigned too.
@@ -39,29 +42,28 @@
 // Please note that only when `PIN_SLIDER_LS` and  `PIN_SLIDER_RS` are set to `-1` will the button combo shortcut for DP/LS/RS work.
 // The buttons are listed in GP2040 configuration, beside each the listed order is *GP2040 / Xinput / Switch / PS3 / Directinput / Arcade*
 
-#define PIN_DPAD_UP     FLATBOX_SW18_PIN         // DOWN
-#define PIN_DPAD_DOWN   FLATBOX_SW8_PIN          // UP
-#define PIN_DPAD_RIGHT  FLATBOX_SW9_PIN          // RIGHT
-#define PIN_DPAD_LEFT   FLATBOX_SW7_PIN          // LEFT
-#define PIN_BUTTON_B1   FLATBOX_SW14_PIN         // B1 / A / B / Cross / 2 / K1
-#define PIN_BUTTON_B2   FLATBOX_SW15_PIN         // B2 / B / A / Circle / 3 / K2
-#define PIN_BUTTON_R2   FLATBOX_SW16_PIN         // R2 / RT / ZR / R2 / 8 / K3
-#define PIN_BUTTON_L2   FLATBOX_SW17_PIN         // L2 / LT / ZL / L2 / 7 / K4
-#define PIN_BUTTON_B3   FLATBOX_SW10_PIN         // B3 / X / Y / Square / 1 / P1
-#define PIN_BUTTON_B4   FLATBOX_SW11_PIN         // B4 / Y / X / Triangle / 4 / P2
-#define PIN_BUTTON_R1   FLATBOX_SW12_PIN         // R1 / RB / R / R1 / 6 / P3
-#define PIN_BUTTON_L1   FLATBOX_SW13_PIN         // L1 / LB / L / L1 / 5 / P4
-#define PIN_BUTTON_S1   FLATBOX_SW2_PIN          // S1 / Back / Minus / Select / 9 / Coin
-#define PIN_BUTTON_S2   FLATBOX_SW1_PIN          // S2 / Start / Plus / Start / 10 / Start
-#define PIN_BUTTON_L3   FLATBOX_SW5_PIN          // L3 / LS / LS / L3 / 11 / LS
-#define PIN_BUTTON_R3   FLATBOX_SW6_PIN          // R3 / RS / RS / R3 / 12 / RS
-#define PIN_BUTTON_A1   FLATBOX_SW3_PIN          // A1 / Guide / Home / PS / 13 / ~
-#define PIN_BUTTON_A2   FLATBOX_SW4_PIN          // A2 / ~ / Capture / ~ / 14 / ~
-#define PIN_BUTTON_REVERSE -1       // UDLR Reverse
-#define PIN_BUTTON_TURBO -1         // Turbo
-#define PIN_SLIDER_LS    -1         // Left Stick Slider
-#define PIN_SLIDER_RS    -1         // Right Stick Slider
-
+#define PIN_DPAD_UP FLATBOX_SW18_PIN   // DOWN
+#define PIN_DPAD_DOWN FLATBOX_SW8_PIN  // UP
+#define PIN_DPAD_RIGHT FLATBOX_SW9_PIN // RIGHT
+#define PIN_DPAD_LEFT FLATBOX_SW7_PIN  // LEFT
+#define PIN_BUTTON_B1 FLATBOX_SW14_PIN // B1 / A / B / Cross / 2 / K1
+#define PIN_BUTTON_B2 FLATBOX_SW15_PIN // B2 / B / A / Circle / 3 / K2
+#define PIN_BUTTON_R2 FLATBOX_SW16_PIN // R2 / RT / ZR / R2 / 8 / K3
+#define PIN_BUTTON_L2 FLATBOX_SW17_PIN // L2 / LT / ZL / L2 / 7 / K4
+#define PIN_BUTTON_B3 FLATBOX_SW10_PIN // B3 / X / Y / Square / 1 / P1
+#define PIN_BUTTON_B4 FLATBOX_SW11_PIN // B4 / Y / X / Triangle / 4 / P2
+#define PIN_BUTTON_R1 FLATBOX_SW12_PIN // R1 / RB / R / R1 / 6 / P3
+#define PIN_BUTTON_L1 FLATBOX_SW13_PIN // L1 / LB / L / L1 / 5 / P4
+#define PIN_BUTTON_S1 FLATBOX_SW2_PIN  // S1 / Back / Minus / Select / 9 / Coin
+#define PIN_BUTTON_S2 FLATBOX_SW1_PIN  // S2 / Start / Plus / Start / 10 / Start
+#define PIN_BUTTON_L3 FLATBOX_SW5_PIN  // L3 / LS / LS / L3 / 11 / LS
+#define PIN_BUTTON_R3 FLATBOX_SW6_PIN  // R3 / RS / RS / R3 / 12 / RS
+#define PIN_BUTTON_A1 FLATBOX_SW3_PIN  // A1 / Guide / Home / PS / 13 / ~
+#define PIN_BUTTON_A2 FLATBOX_SW4_PIN  // A2 / ~ / Capture / ~ / 14 / ~
+#define PIN_BUTTON_REVERSE -1		   // UDLR Reverse
+#define PIN_BUTTON_TURBO -1			   // Turbo
+#define PIN_SLIDER_LS -1			   // Left Stick Slider
+#define PIN_SLIDER_RS -1			   // Right Stick Slider
 
 // This is the SOCD section.
 // SOCD stands for `simultaneous opposing cardinal directions`.
@@ -71,7 +73,6 @@
 // 3 - `SOCD_MODE_SECOND_INPUT_PRIORITY` - This is last priority SOCD.  EG. when you press and hold `up` then press `down` `down` will be registered.
 
 #define DEFAULT_SOCD_MODE SOCD_MODE_NEUTRAL
-
 
 // This is the LEDs section.
 // The default `TURBO_LED_PIN` pin is set to `15` ( it is recommended to run through 3V3(OUT) with a resistor)
@@ -99,7 +100,6 @@
 #define BOARD_LEDS_PIN -1
 #define REVERSE_LED_PIN -1
 
-
 // This is the Player LED section.
 // In this section you can specify if Player LEDs will be active, and, if active, which pins will be used for them.
 // The defualt is `PLED_TYPE_NONE` which will turn the Player LEDs off.
@@ -116,7 +116,6 @@
 #define PLED3_PIN -1
 #define PLED4_PIN -1
 
-
 // This is the Analog section.
 // In this section you can specify if Analog is enabled, and, if endabled, which pins will be used for it.
 // The default for `ANALOG_ADC_VRX` and `ANALOG_ADC_VRY` is `-1` which disables them.
@@ -124,7 +123,6 @@
 
 #define ANALOG_ADC_VRX -1
 #define ANALOG_ADC_VRY -1
-
 
 // This is the I2C Display section (commonly known as the OLED display section).
 // In this section you can specify if a display as been enabled, which pins are assined to it, the block address and speed.
@@ -144,7 +142,6 @@
 
 #define HAS_I2C_DISPLAY 0
 
-
 // The default `SPLASH_MODE` is `NOSPLASH`.
 // There are four options for `SPLASH_MODE` currently:
 // 1 - `STATICSPLASH` - This will display the static splash image
@@ -155,7 +152,6 @@
 
 #define SPLASH_MODE NOSPLASH
 #define SPLASH_CHOICE MAIN
-
 
 // The default `BUTTON_LAYOUT` is `BUTTON_LAYOUT_STICK` which will show an arcade stick on the left hand side of the display.
 // There are seven options for `BUTTON_LAYOUT` currently:
