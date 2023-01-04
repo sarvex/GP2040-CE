@@ -1,10 +1,9 @@
-#ifndef PICO_BOARD_CONFIG_H_
-#define PICO_BOARD_CONFIG_H_
-#endif
-
 #ifndef BOARD_SPARKFUN_MICRO_RP2040
 #define BOARD_SPARKFUN_MICRO_RP2040
 #endif
+
+#ifndef PICO_BOARD_CONFIG_H_
+#define PICO_BOARD_CONFIG_H_
 
 #include <GamepadEnums.h>
 

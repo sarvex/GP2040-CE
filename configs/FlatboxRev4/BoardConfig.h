@@ -2,14 +2,15 @@
  * SPDX-License-Identifier: MIT
  * SPDX-FileCopyrightText: Copyright (c) 2021 Jason Skuby (mytechtoybox.com)
  */
-
-#ifndef FLATBOX_REV4_CONFIG_H_
-#define FLATBOX_REV4_CONFIG_H_
-#endif
-
 #ifndef PICO_XOSC_STARTUP_DELAY_MULTIPLIER
 #define PICO_XOSC_STARTUP_DELAY_MULTIPLIER 64
 #endif
+
+#ifndef FLATBOX_REV4_CONFIG_H_
+#define FLATBOX_REV4_CONFIG_H_
+
+
+
 
 #include <GamepadEnums.h>
 
