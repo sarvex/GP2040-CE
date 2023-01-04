@@ -5,6 +5,11 @@
 
 #ifndef FLATBOX_REV5_CONFIG_H_
 #define FLATBOX_REV5_CONFIG_H_
+#endif
+
+#ifndef PICO_XOSC_STARTUP_DELAY_MULTIPLIER
+#define PICO_XOSC_STARTUP_DELAY_MULTIPLIER 64
+#endif
 
 #include <GamepadEnums.h>
 
