@@ -4,6 +4,8 @@
 [submodule "www"]
 	path = www
 	url = https://github.com/OpenStickCommunity/WebConfigurator.git
+	branch = Pico-sdk-develop
 [submodule "MPG"]
 	path = MPG
 	url = https://github.com/OpenStickCommunity/MPG.git
+	branch = Pico-sdk-develop
